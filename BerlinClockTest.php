@@ -14,6 +14,12 @@ class BerlinClockTest extends TestCase{
         $this->berlinClock = new \BerlinClock();
     }
 
+    public function test_count_given0_shouldReturn0(){
+        $actual = $this->actCount(0);
+
+        $this->assertEquals("0", $actual);
+    }
+
     public function test_count_given1_shouldReturn1(){
         $actual = $this->actCount(1);
 
