@@ -15,14 +15,19 @@ class BerlinClockTest extends TestCase{
     }
 
     public function test_count_given1_shouldReturn1(){
-        $actual = $this->berlinClock->count(1);
+        $actual = $this->actCount(1);
 
         $this->assertEquals("1", $actual);
     }
 
     public function test_count_given2_shouldReturn2(){
-        $actual = $this->berlinClock->count(2);
+        $actual = $this->actCount(2);
 
         $this->assertEquals("2", $actual);
+    }
+
+
+    private function actCount(int $int): string{
+        return $this->berlinClock->count($int);
     }
 }
