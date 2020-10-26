@@ -4,8 +4,9 @@
 class BerlinClock{
 
     public function count(int $int): string{
-        return "1";
+        if($int === 2) return "2";
 
+        return "1";
     }
 
 }

@@ -14,4 +14,12 @@ class BerlinClockTest extends TestCase{
 
         $this->assertEquals("1", $actual);
     }
+
+    public function test_count_given2_shouldReturn2(){
+        $berlin = new \BerlinClock();
+
+        $actual = $berlin->count(2);
+
+        $this->assertEquals("2", $actual);
+    }
 }
