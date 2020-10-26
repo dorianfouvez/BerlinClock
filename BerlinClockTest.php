@@ -62,6 +62,12 @@ class BerlinClockTest extends TestCase{
         $this->assertEquals("2", $actual);
     }
 
+    public function test_count_given8_shouldReturn3(){
+        $actual = $this->actCount(8);
+
+        $this->assertEquals("3", $actual);
+    }
+
 
 
     private function actCount(int $int): string{
