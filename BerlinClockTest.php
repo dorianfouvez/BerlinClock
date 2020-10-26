@@ -7,18 +7,21 @@ use PHPUnit\Framework\TestCase;
 
 class BerlinClockTest extends TestCase{
 
-    public function test_count_given1_shouldReturn1(){
-        $berlin = new \BerlinClock();
+    private $berlinClock;
 
-        $actual = $berlin->count(1);
+    protected function setUp(): void{
+        parent::setUp();
+        $this->berlinClock = new \BerlinClock();
+    }
+
+    public function test_count_given1_shouldReturn1(){
+        $actual = $this->berlinClock->count(1);
 
         $this->assertEquals("1", $actual);
     }
 
     public function test_count_given2_shouldReturn2(){
-        $berlin = new \BerlinClock();
-
-        $actual = $berlin->count(2);
+        $actual = $this->berlinClock->count(2);
 
         $this->assertEquals("2", $actual);
     }
