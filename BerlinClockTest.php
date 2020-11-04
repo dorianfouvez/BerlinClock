@@ -14,64 +14,64 @@ class BerlinClockTest extends TestCase{
         $this->berlinClock = new \BerlinClock();
     }
 
-    public function test_countSimpleMinutes_given0_shouldReturnxxxx(){
+    public function test_countSimpleMinutes_given0_shouldReturn0Y(){
         $actual = $this->actCountMinutes(0);
 
-        $this->assertEquals("xxxx", $actual);
+        $this->assertEquals("0Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given1_shouldReturnYxxx(){
+    public function test_countSimpleMinutes_given1_shouldReturn1Y(){
         $actual = $this->actCountMinutes(1);
 
-        $this->assertEquals("Yxxx", $actual);
+        $this->assertEquals("1Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given2_shouldReturnYYxx(){
+    public function test_countSimpleMinutes_given2_shouldReturn2Y(){
         $actual = $this->actCountMinutes(2);
 
-        $this->assertEquals("YYxx", $actual);
+        $this->assertEquals("2Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given3_shouldReturnYYYx(){
+    public function test_countSimpleMinutes_given3_shouldReturn3Y(){
         $actual = $this->actCountMinutes(3);
 
-        $this->assertEquals("YYYx", $actual);
+        $this->assertEquals("3Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given4_shouldReturnYYYY(){
+    public function test_countSimpleMinutes_given4_shouldReturn4Y(){
         $actual = $this->actCountMinutes(4);
 
-        $this->assertEquals("YYYY", $actual);
+        $this->assertEquals("4Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given5_shouldReturnxxxx(){
+    public function test_countSimpleMinutes_given5_shouldReturn0Y(){
         $actual = $this->actCountMinutes(5);
 
-        $this->assertEquals("xxxx", $actual);
+        $this->assertEquals("0Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given6_shouldReturnYxxx(){
+    public function test_countSimpleMinutes_given6_shouldReturn1Y(){
         $actual = $this->actCountMinutes(6);
 
-        $this->assertEquals("Yxxx", $actual);
+        $this->assertEquals("1Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given7_shouldReturnYYxx(){
+    public function test_countSimpleMinutes_given7_shouldReturn2Y(){
         $actual = $this->actCountMinutes(7);
 
-        $this->assertEquals("YYxx", $actual);
+        $this->assertEquals("2Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given8_shouldReturnYYYx(){
+    public function test_countSimpleMinutes_given8_shouldReturn3Y(){
         $actual = $this->actCountMinutes(8);
 
-        $this->assertEquals("YYYx", $actual);
+        $this->assertEquals("3Y", $actual);
     }
 
-    public function test_countSimpleMinutes_given9_shouldReturnYYYY(){
+    public function test_countSimpleMinutes_given9_shouldReturn4Y(){
         $actual = $this->actCountMinutes(9);
 
-        $this->assertEquals("YYYY", $actual);
+        $this->assertEquals("4Y", $actual);
     }
 
     public function test_countBlockOfFiveMinutes_given0_shouldReturn0Y0R(){
@@ -151,6 +151,8 @@ class BerlinClockTest extends TestCase{
 
         $this->assertEquals("8Y3R", $actual);
     }
+
+
 
 
 

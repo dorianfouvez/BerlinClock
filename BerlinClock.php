@@ -6,12 +6,12 @@ class BerlinClock{
     public function countSimpleMinutes(int $int): string{
         $int = $int%5;
 
-        if($int === 1) return "Yxxx";
-        if($int === 2) return "YYxx";
-        if($int === 3) return "YYYx";
-        if($int === 4) return "YYYY";
+        if($int === 1) return "1Y";
+        if($int === 2) return "2Y";
+        if($int === 3) return "3Y";
+        if($int === 4) return "4Y";
 
-        return "xxxx";
+        return "0Y";
     }
 
     public function countBlockOfFiveMinutes(int $int): string{
