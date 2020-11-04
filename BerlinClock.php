@@ -50,4 +50,8 @@ class BerlinClock{
         return "0R";
     }
 
+    public function countSeconds(int $int): string{
+        return "0R";
+    }
+
 }

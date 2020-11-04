@@ -242,6 +242,12 @@ class BerlinClockTest extends TestCase{
         $this->assertEquals("4R", $actual);
     }
 
+    public function test_countSeconds_given0_shouldReturn0R(){
+        $actual = $this->actCountSeconds(0);
+
+        $this->assertEquals("0R", $actual);
+    }
+
 
 
     private function actCountMinutes(int $int): string{
@@ -255,5 +261,8 @@ class BerlinClockTest extends TestCase{
     }
     private function actCountBlockOfFiveHours(int $int): string{
         return $this->berlinClock->countBlockOfFiveHours($int);
+    }
+    private function actCountSeconds(int $int): string{
+        return $this->berlinClock->countSeconds($int);
     }
 }
