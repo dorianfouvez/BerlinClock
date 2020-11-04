@@ -14,67 +14,76 @@ class BerlinClockTest extends TestCase{
         $this->berlinClock = new \BerlinClock();
     }
 
-    public function test_countSimpleMinutes_given0_shouldReturn0(){
-        $actual = $this->actCount(0);
+    public function test_countSimpleMinutes_given0_shouldReturnxxxx(){
+        $actual = $this->actCountMinutes(0);
 
-        $this->assertEquals("0", $actual);
+        $this->assertEquals("xxxx", $actual);
     }
 
-    public function test_countSimpleMinutes_given1_shouldReturn1(){
-        $actual = $this->actCount(1);
+    public function test_countSimpleMinutes_given1_shouldReturnYxxx(){
+        $actual = $this->actCountMinutes(1);
 
-        $this->assertEquals("1", $actual);
+        $this->assertEquals("Yxxx", $actual);
     }
 
-    public function test_countSimpleMinutes_given2_shouldReturn2(){
-        $actual = $this->actCount(2);
+    public function test_countSimpleMinutes_given2_shouldReturnYYxx(){
+        $actual = $this->actCountMinutes(2);
 
-        $this->assertEquals("2", $actual);
+        $this->assertEquals("YYxx", $actual);
     }
 
-    public function test_countSimpleMinutes_given3_shouldReturn3(){
-        $actual = $this->actCount(3);
+    public function test_countSimpleMinutes_given3_shouldReturnYYYx(){
+        $actual = $this->actCountMinutes(3);
 
-        $this->assertEquals("3", $actual);
+        $this->assertEquals("YYYx", $actual);
     }
 
-    public function test_countSimpleMinutes_given4_shouldReturn4(){
-        $actual = $this->actCount(4);
+    public function test_countSimpleMinutes_given4_shouldReturnYYYY(){
+        $actual = $this->actCountMinutes(4);
 
-        $this->assertEquals("4", $actual);
+        $this->assertEquals("YYYY", $actual);
     }
 
-    public function test_countSimpleMinutes_given5_shouldReturn0(){
-        $actual = $this->actCount(5);
+    public function test_countSimpleMinutes_given5_shouldReturnxxxx(){
+        $actual = $this->actCountMinutes(5);
 
-        $this->assertEquals("0", $actual);
+        $this->assertEquals("xxxx", $actual);
     }
 
-    public function test_countSimpleMinutes_given6_shouldReturn1(){
-        $actual = $this->actCount(6);
+    public function test_countSimpleMinutes_given6_shouldReturnYxxx(){
+        $actual = $this->actCountMinutes(6);
 
-        $this->assertEquals("1", $actual);
+        $this->assertEquals("Yxxx", $actual);
     }
 
-    public function test_countSimpleMinutes_given7_shouldReturn2(){
-        $actual = $this->actCount(7);
+    public function test_countSimpleMinutes_given7_shouldReturnYYxx(){
+        $actual = $this->actCountMinutes(7);
 
-        $this->assertEquals("2", $actual);
+        $this->assertEquals("YYxx", $actual);
     }
 
-    public function test_countSimpleMinutes_given8_shouldReturn3(){
-        $actual = $this->actCount(8);
+    public function test_countSimpleMinutes_given8_shouldReturnYYYx(){
+        $actual = $this->actCountMinutes(8);
 
-        $this->assertEquals("3", $actual);
+        $this->assertEquals("YYYx", $actual);
     }
 
-    public function test_countSimpleMinutes_given9_shouldReturn4(){
-        $actual = $this->actCount(9);
+    public function test_countSimpleMinutes_given9_shouldReturnYYYY(){
+        $actual = $this->actCountMinutes(9);
 
-        $this->assertEquals("4", $actual);
+        $this->assertEquals("YYYY", $actual);
     }
 
-    private function actCount(int $int): string{
+    public function test_countBlockOfFiveMinutes_given0_shouldReturn0Y0R(){
+        $actual = $this->actCountBlockOfFiveMinutes(0);
+
+        $this->assertEquals("0Y0R", $actual);
+    }
+
+    private function actCountMinutes(int $int): string{
         return $this->berlinClock->countSimpleMinutes($int);
+    }
+    private function actCountBlockOfFiveMinutes(int $int): string{
+        return $this->berlinClock->countBlockOfFiveMinutes($int);
     }
 }
