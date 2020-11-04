@@ -211,6 +211,11 @@ class BerlinClockTest extends TestCase{
 
         $this->assertEquals("0R", $actual);
     }
+    public function test_countBlockOfFiveHours_given5_shouldReturn1R(){
+        $actual = $this->actCountBlockOfFiveHours(5);
+
+        $this->assertEquals("1R", $actual);
+    }
 
 
 
