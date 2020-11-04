@@ -12,6 +12,7 @@ class BerlinClockTest extends TestCase{
     protected function setUp(): void{
         parent::setUp();
         $this->berlinClock = new \BerlinClock();
+        date_default_timezone_set('Europe/Paris');
     }
 
     public function test_countSimpleMinutes_given0_shouldReturn0Y(){
@@ -264,6 +265,14 @@ class BerlinClockTest extends TestCase{
         $actual = $this->actCountSeconds(3);
 
         $this->assertEquals("0R", $actual);
+    }
+
+    public function test_countEntireClock_given00H00M00S_shouldReturn0Y0Y0R0R0R1R(){
+        $date = date("H:i:s",mktime(0,0,0));
+
+        $actual = $this->berlinClock->countEntireClock($date);
+
+        $this->assertEquals("0Y0Y0R0R0R1R", $actual);
     }
 
 

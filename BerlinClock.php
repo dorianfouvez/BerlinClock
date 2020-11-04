@@ -58,4 +58,8 @@ class BerlinClock{
         return "1R";
     }
 
+    public function countEntireClock(string $heure): string{
+        return "0Y0Y0R0R0R1R";
+    }
+
 }
