@@ -30,7 +30,7 @@ class BerlinClock{
         return "0Y0R";
     }
 
-    public function countSimplesHours(int $int): string{
+    public function countSimpleHours(int $int): string{
         $int = $int%5;
 
         if($int === 1) return "1R";
@@ -59,7 +59,15 @@ class BerlinClock{
     }
 
     public function countEntireClock(string $heure): string{
-        return "0Y0Y0R0R0R1R";
+        $hours = intval(substr($heure, 0, 2));
+        $minutes = intval(substr($heure, 3, 2));
+        $seconds = intval(substr($heure, 6,2));
+
+        $stringMinutes = $this->countSimpleMinutes($minutes) . $this->countBlockOfFiveMinutes($minutes);
+        $stringHours = $this->countSimpleHours($hours) . $this->countBlockOfFiveHours($hours);
+        $stringSeconds = $this->countSeconds($seconds);
+
+        return $stringMinutes . $stringHours . $stringSeconds;
     }
 
 }

@@ -277,6 +277,8 @@ class BerlinClockTest extends TestCase{
 
 
 
+
+
     private function actCountMinutes(int $int): string{
         return $this->berlinClock->countSimpleMinutes($int);
     }
@@ -284,7 +286,7 @@ class BerlinClockTest extends TestCase{
         return $this->berlinClock->countBlockOfFiveMinutes($int);
     }
     private function actCountSimpleHours(int $int): string{
-        return $this->berlinClock->countSimplesHours($int);
+        return $this->berlinClock->countSimpleHours($int);
     }
     private function actCountBlockOfFiveHours(int $int): string{
         return $this->berlinClock->countBlockOfFiveHours($int);
