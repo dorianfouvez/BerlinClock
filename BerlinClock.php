@@ -15,6 +15,7 @@ class BerlinClock{
     }
 
     public function countBlockOfFiveMinutes(int $int): string{
+        if($int >= 45) return "6Y3R";
         if($int >= 40) return "6Y2R";
         if($int >= 35) return "5Y2R";
         if($int >= 30) return "4Y2R";
