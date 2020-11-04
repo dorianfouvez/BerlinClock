@@ -31,11 +31,12 @@ class BerlinClock{
     }
 
     public function countSimplesHours(int $int): string{
+        $int = $int%5;
+
         if($int === 1) return "1R";
         if($int === 2) return "2R";
         if($int === 3) return "3R";
         if($int === 4) return "4R";
-        if($int === 6) return "1R";
 
         return "0R";
     }
