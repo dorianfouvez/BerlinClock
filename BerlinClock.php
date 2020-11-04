@@ -30,4 +30,8 @@ class BerlinClock{
         return "0Y0R";
     }
 
+    public function countSimplesHours(int $int): string{
+        return "0R";
+    }
+
 }
