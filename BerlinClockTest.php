@@ -182,6 +182,14 @@ class BerlinClockTest extends TestCase{
         $this->assertEquals("4R", $actual);
     }
 
+    public function test_countSimpleHours_given5_shouldReturn0R(){
+        $actual = $this->actCountSimpleHours(5);
+
+        $this->assertEquals("0R", $actual);
+    }
+
+
+
 
 
 
