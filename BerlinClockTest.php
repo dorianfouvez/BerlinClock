@@ -275,8 +275,30 @@ class BerlinClockTest extends TestCase{
         $this->assertEquals("0Y0Y0R0R0R1R", $actual);
     }
 
+    public function test_countEntireClock_given00H00M01S_shouldReturn0Y0Y0R0R0R0R(){
+        $date = date("H:i:s",mktime(0,0,1));
 
+        $actual = $this->berlinClock->countEntireClock($date);
 
+        $this->assertEquals("0Y0Y0R0R0R0R", $actual);
+    }
+
+    public function test_countEntireClock_given00H00M01S_shouldReturn1Y3Y1R0R3R1R(){
+        $date = date("H:i:s",mktime(15,21,6));
+
+        $actual = $this->berlinClock->countEntireClock($date);
+
+        $this->assertEquals("1Y3Y1R0R3R1R", $actual);
+    }
+
+    public function test_showClock_givenDateTime_shouldReturnDisplay(){
+        $date = date("H:i:s");
+
+        $actual = $this->berlinClock->countEntireClock($date);
+        var_dump($actual);
+
+        $this->assertEquals($actual, $actual);
+    }
 
 
     private function actCountMinutes(int $int): string{
