@@ -14,6 +14,8 @@ class BerlinClock{
         return "xxxx";
     }
 
-
+    public function countBlockOfFiveMinutes(int $int): string{
+        return "0Y0R";
+    }
 
 }
