@@ -51,9 +51,9 @@ class BerlinClock{
     }
 
     public function countSeconds(int $int): string{
-        if($int === 1) return "1R";
+        if($int === 1) return "0R";
 
-        return "0R";
+        return "1R";
     }
 
 }

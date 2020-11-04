@@ -242,23 +242,25 @@ class BerlinClockTest extends TestCase{
         $this->assertEquals("4R", $actual);
     }
 
-    public function test_countSeconds_given0_shouldReturn0R(){
+    public function test_countSeconds_given0_shouldReturn1R(){
         $actual = $this->actCountSeconds(0);
-
-        $this->assertEquals("0R", $actual);
-    }
-
-    public function test_countSeconds_given1_shouldReturn1R(){
-        $actual = $this->actCountSeconds(1);
 
         $this->assertEquals("1R", $actual);
     }
 
-    public function test_countSeconds_given2_shouldReturn0R(){
-        $actual = $this->actCountSeconds(2);
+    public function test_countSeconds_given1_shouldReturn0R(){
+        $actual = $this->actCountSeconds(1);
 
         $this->assertEquals("0R", $actual);
     }
+
+    public function test_countSeconds_given2_shouldReturn1R(){
+        $actual = $this->actCountSeconds(2);
+
+        $this->assertEquals("1R", $actual);
+    }
+
+
 
 
 
