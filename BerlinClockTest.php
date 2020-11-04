@@ -122,6 +122,12 @@ class BerlinClockTest extends TestCase{
         $this->assertEquals("4Y2R", $actual);
     }
 
+    public function test_countBlockOfFiveMinutes_given35_shouldReturn5Y2R(){
+        $actual = $this->actCountBlockOfFiveMinutes(35);
+
+        $this->assertEquals("5Y2R", $actual);
+    }
+
 
 
     private function actCountMinutes(int $int): string{
