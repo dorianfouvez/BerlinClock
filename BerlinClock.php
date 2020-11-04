@@ -42,6 +42,7 @@ class BerlinClock{
     }
 
     public function countBlockOfFiveHours(int $int): string{
+        if($int >= 20) return "4R";
         if($int >= 15) return "3R";
         if($int >= 10) return "2R";
         if($int >= 5) return "1R";
